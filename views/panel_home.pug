@@ -1,0 +1,380 @@
+#homePanel.panel
+	div
+		div(style="display:none;")
+			#tips
+				span Tips: Simply 
+				strong drag 
+				span and 
+				strong drop 
+				span a marble from one user to another
+
+			#ownerWrap
+				div#toolbarWrap
+					.bottomAlign
+						input(type="text" placeholder="Search Marble Owners" style="margin-left: 0; border-radius:2px;")#searchUsers.longer
+						span.hint(style="margin-left: 10px; font-size: 16px;") 
+							span#foundUsers 0
+							span /
+							span#totalUsers 0
+						
+					span &nbsp;&nbsp;
+
+					button(disabled="disabled")#showSettingsPanel
+						span.fa.fa-gear
+						span &nbsp; Settings
+					
+					#trashbin.sortable.innerMarbleWrap
+						div.fa.fa-trash-o.fa-3x(style="vertical-align: middle;")
+						span &nbsp;
+						div#trashText Drag and drop marble to remove
+				
+
+
+			#allUserPanelsWrap
+				#appStartingText Connecting...
+		
+		<br/>
+		<br/>
+		
+		<div id="userInfoPannel" style="box-shadow: 10px 10px 20px black; margin-right:20%;margin-left:20%;">
+			<div style="background-color:#555758; border-radius:4px;" class="companyNameWrap myCompany">
+				<span class="companyName">사용자 정보</span>
+			</div>
+			<div style="background-color:white;color:gray;border-radius:4px;padding:20px;" id="userInfoContainer" class="soscon_container">
+				<center>
+					<div id="userInfoLogOffMode">
+						<br/>
+						<h4>로그인을 하시면 소속그룹에 대한 업무를 처리 할 수 있습니다.</h4>
+						<br/>
+						<br/>
+						<p>아이디
+							<br/>
+							<input id="user_id" type="text" placeholder="" style="margin-left: 0; border-radius:2px;" class="longer" />
+						</p>
+						<br/>
+						<p>비밀번호
+							<br/>
+							<input id="user_pw" type="password" placeholder="" style="margin-left: 0; border-radius:2px;" class="longer" />
+						</p>
+						<br/>
+						<button id="user_LoginButton" style="background-color:#555758;">
+							<span class="fa fa-sign-in"></span>
+							<span>  로그인</span>
+						</button>
+						<br/>
+					</div>
+					<div id="userInfoLogInMode" style="display:none;">
+						<br/>
+						<h5 id="userIntroduce">[성균관제약] 소속 [위자랑]님 반갑습니다.</h5>
+						<br/>
+						<button id="user_LogoutButton" style="background-color:#555758;">
+							<span class="fa fa-sign-out"></span>
+							<span>  로그아웃</span>
+						</button>
+						<br/>
+					</div>
+				</center>
+			</div>
+		</div>
+
+		<br/>
+		<br/>
+		
+		<div id="userInterfacePannel" style="box-shadow: 10px 10px 20px black; margin-right:20%;margin-left:20%; display:none;">
+			<div style="background-color:#555758; border-radius:4px;" class="companyNameWrap myCompany">
+				<span class="companyName">대시보드</span>
+			</div>
+			<div style="background-color:white;color:gray;border-radius:4px;padding:20px;" id="userInterfaceContainer" class="soscon_container">
+				<br/>
+				<center>
+				<div class="develop_group_menu">
+					<button id="openProductRegistInterface" style="background-color:#555758;" class="develop_group_menu">
+						<span class="fa fa-upload"></span>
+						<span>  제품등록</span>
+					</button>
+					<br/>
+					<br/>
+					<button id="openProductListInterface" style="background-color:#555758;" class="develop_group_menu">
+						<span class="fa fa-list-alt"></span>
+						<span>  제품현황 조회</span>
+					</button>
+					<br/>
+					<br/>
+					<button id="openMaterialListInterfaceForDevelop" style="background-color:#555758;" class="develop_group_menu">
+						<span class="fa fa-list-alt"></span>
+						<span>  원재료현황 조회</span>
+					</button>				<br/>
+					<br/>
+					<button id="openReqMatertialInterface" style="background-color:#555758;" class="develop_group_menu">
+						<span class="fa fa-credit-card"></span>
+						<span>  원재료 배송요청</span>
+					</button>
+					<br/>
+					<br/>
+				</div>
+				<div class="supply_group_menu">
+					<button id="openMaterialRegistInterface" style="background-color:#555758;" class="supply_group_menu">
+						<span class="fa fa-upload"></span>
+						<span>  원재료 등록</span>
+					</button>
+					<br/>
+					<br/>
+					<button id="openMaterialListInterfaceForSupply" style="background-color:#555758;" class="supply_group_menu">
+						<span class="fa fa-list-alt"></span>
+						<span>  원재료현황 조회</span>
+					</button>
+					<br/>
+					<br/>
+					<button id="openResponseMatertialInterface" style="background-color:#555758;" class="supply_group_menu">
+						<span class="fa fa-credit-card"></span>
+						<span>  배송요청된 원재료 확인</span>
+					</button>
+					<br/>
+					<br/>
+				</div>
+				</center>
+			</div>
+		</div>
+		
+		<br/>
+		<br/>
+
+		<div id="productRegistPanel" style="box-shadow: 10px 10px 20px black; margin-right:20%;margin-left:20%; display:none;">
+			<div style="background-color:#555758; border-radius:4px;" class="companyNameWrap myCompany">
+				<span class="companyName">제품 등록</span>
+			</div>
+			<div style="background-color:white;color:gray;border-radius:4px;padding:20px;" class="soscon_container">
+				<br/>
+				<center>
+					<p>등록일
+						<br/>
+						<input id="productRegist_RegisterDate" type="text" placeholder="RegisterDate" style="margin-left: 0; border-radius:2px;" class="longer" />
+					</p>
+					<br/>
+					<p>제품명
+						<br/>
+						<input id="productRegist_ProductName" type="text" placeholder="ProductName" style="margin-left: 0; border-radius:2px;" class="longer" />
+					</p>
+					<input id="productRegist_ProductVolume" type="hidden" value="1" placeholder="ProductVolume" style="margin-left: 0; border-radius:2px;" class="longer" />
+					<br/>
+					<p>주원료명
+						<br/>
+						<input id="productRegist_MainIngredientName" type="text" placeholder="MainIngredientName" style="margin-left: 0; border-radius:2px;" class="longer" />
+					</p>
+					<br/>
+					<p>주원료 소모량(제품 1개 기준)
+						<br/>
+						<input id="productRegist_ProductWeight" type="text" placeholder="Resource price" style="margin-left: 0; border-radius:2px;" class="longer" />
+					</p>
+					<br/>
+					<p>생산량
+						<br/>
+						<input id="productRegist_forcoin" type="text" placeholder="TotalNumber" style="margin-left: 0; border-radius:2px;" class="longer" />
+					</p>
+					<br/>
+					<button id="productRegistButton" style="background-color:#555758;">
+						<span class="fa fa-upload"></span>
+						<span>  등록하기</span>
+					</button>
+					<br/>
+				</center>
+				<br/>
+				<br/>
+
+			</div>
+		</div>
+
+		<div id="productListPannel" style="box-shadow: 10px 10px 20px black; margin-right:20%;margin-left:20%; display:none;">
+			<div style="background-color:#555758; border-radius:4px;" class="companyNameWrap myCompany">
+				<span class="companyName">제품 현황</span>
+			</div>
+			<div style="background-color:white;color:gray;border-radius:4px;padding:20px;" id="productListContainer" class="soscon_container">
+				<h5>블록체인 장부에 기반한 현재 보유량을 표시합니다.</h5>
+				<br/>
+				<div id="productListTable">
+					<table>
+						<tr>
+							<th>그룹명</th>
+							<th>제품명</th>
+							<th>제품무게</th>
+							<th>제품용량</th>
+							<th>주재료명</th>
+							<th>제품보유량</th>
+						</tr>
+						<tr>
+							<td>삼성제약</td>
+							<td>타이레놀</td>
+							<td>30g</td>
+							<td>6</td>
+							<td>apple</td>
+							<td>18080</td>
+						</tr>
+						<tr>
+							<td>삼성제약</td>
+							<td>게보린</td>
+							<td>10g</td>
+							<td>12</td>
+							<td>banana</td>
+							<td>323180</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div id="materialReqPanel" style="box-shadow: 10px 10px 20px black; margin-right:20%;margin-left:20%; display:none;">
+			<div style="background-color:#555758; border-radius:4px;" class="companyNameWrap myCompany">
+				<span class="companyName">원재료 요청</span>
+			</div>
+			<div style="background-color:white;color:gray;border-radius:4px;padding:20px;" class="soscon_container">
+				<center>
+					<p>요청할 원재료명
+						<br/>
+						<input id="materialReq_materialName" type="text" placeholder="요청할 원재료명" style="margin-left: 0; border-radius:2px;" class="longer" />
+					</p>
+					<br/>
+					<p>요청량(g)
+						<br/>
+						<input id="materialReq_forcoin" type="text" placeholder="수량" style="margin-left: 0; border-radius:2px;" class="longer" />
+					</p>
+					<br/>
+					<p>요청일
+						<br/>
+						<input id="materialReq_RegisterDate" type="text" placeholder="요청일" style="margin-left: 0; border-radius:2px;" class="longer" />
+					</p>
+					<br/>
+					<p>계약번호
+						<br/>
+						<input id="materialReq_ContractNum" type="text" placeholder="계약번호" style="margin-left: 0; border-radius:2px;" class="longer" />
+					</p>
+					<br/>
+					<br/>
+					<button id="materialReqButton" style="background-color:#555758;">
+						<span class="fa fa-credit-card"></span>
+						<span>  요청하기</span>
+					</button>
+					<br/>
+					<br/>
+				</center>
+			</div>
+		</div>
+
+		<div id="materialListPannel" style="box-shadow: 10px 10px 20px black; margin-right:20%;margin-left:20%; display:none;">
+			<div style="background-color:#555758; border-radius:4px;" class="companyNameWrap myCompany">
+				<span class="companyName">원재료 현황</span>
+			</div>
+			<div style="background-color:white;color:gray;border-radius:4px;padding:20px;" id="materialListContainer" class="soscon_container">
+				<h5>블록체인 장부에 기반한 현재 보유량을 표시합니다.</h5>
+				<br/>
+				<div id="materialListTable">
+					<table>
+						<tr>
+							<th>그룹명</th>
+							<th>원재료명</th>
+							<th>원재료 무게단위</th>
+							<th>원재료 보유량</th>
+						</tr>
+						<tr>
+							<td>삼성화학</td>
+							<td>apple</td>
+							<td>30g</td>
+							<td>500000</td>
+						</tr>
+						<tr>
+							<td>삼성화학</td>
+							<td>avocado</td>
+							<td>10g</td>
+							<td>12000000</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div id="materialRegistPannel" style="box-shadow: 10px 10px 20px black; margin-right:20%;margin-left:20%; display:none;">
+			<div style="background-color:#555758; border-radius:4px;" class="companyNameWrap myCompany">
+				<span class="companyName">원재료 등록</span>
+			</div>
+			<div style="background-color:white;color:gray;border-radius:4px;padding:20px;" id="materialRegistContainer" class="soscon_container">
+				<center>
+					<br/>
+					<p>원재료명
+						<br/>
+						<input id="materialRegist_materialName" type="text" placeholder="" style="margin-left: 0; border-radius:2px;" class="longer" />
+					</p>
+					<br/>
+					<p>등록일
+						<br/>
+						<input id="materialRegist_registerDate" type="text" placeholder="" style="margin-left: 0; border-radius:2px;" class="longer" />
+					</p>
+					<input id="materialRegist_materialWeight" type="hidden" value="1" placeholder="" style="margin-left: 0; border-radius:2px;" class="longer" />
+					<br/>
+					<p>생산량(g)
+						<br/>
+						<input id="materialRegist_forcoin" type="text" placeholder="" style="margin-left: 0; border-radius:2px;" class="longer" />
+					</p>
+					<br/>
+					<button id="materialRegistButton" style="background-color:#555758;">
+						<span class="fa fa-upload"></span>
+						<span>  등록하기</span>
+					</button>
+				</center>
+				<br/>
+				<br/>
+			</div>
+		</div>
+
+		<div id="materialReqCheckPannel" style="box-shadow: 10px 10px 20px black; margin-right:20%;margin-left:20%; display:none;">
+			<div style="background-color:#555758; border-radius:4px;" class="companyNameWrap myCompany">
+				<span class="companyName">원재료 요청 확인</span>
+			</div>
+			<div style="background-color:white;color:gray;border-radius:4px;padding:20px;" id="materialReqCheckContainer" class="soscon_container">
+				<h5>제품개발 그룹으로부터 요청받은 원재료 리스트 입니다.</h5>
+				<br/>
+				<div id="contractListTable">
+					<table>
+						<tr>
+							<th>그룹명</th>
+							<th>요청자</th>
+							<th>요청일</th>
+							<th>요청 원재료</th>
+							<th>수량</th>
+							<th>승인</th>
+						</tr>
+						<tr>
+							<td>삼성제약</td>
+							<td>위사랑</td>
+							<td>2018-10-10</td>
+							<td>apple</td>
+							<td>50000</td>
+							<td>
+								<button id="materialReqOKButton" style="background-color:#555758;">
+									<span class="fa fa-check"></span>
+									<span>  승인하기</span>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>상명제약</td>
+							<td>이태호</td>
+							<td>2018-10-09</td>
+							<td>orange</td>
+							<td>33939382</td>
+							<td>승인완료</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<button disabled="disabled" id="showStartupPanel"><span class="fa fa-gears"></span><span>&nbsp; 관리모드</span></button>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
