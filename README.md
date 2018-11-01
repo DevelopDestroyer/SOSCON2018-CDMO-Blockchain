@@ -9,7 +9,7 @@ Gazzzzzzzzzzzzzzzza~~~~~~~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!
  
 # Dapp Structure
 
-# Dapp서버사이드 통신구조 명세
+# Dapp 프론드엔드->백엔드->블록체인 네트워크 통신구조 명세
 ## 클라이언트
  - views/panel_home.pug : 모든 Dapp 기능은 싱글페이지에서 수행됩니다. view에서는 HTML/JQuery를 통해 사용자로부터 CDMO-Blockchain을 수행하기 위한 오더 및 데이터를 입력 받습니다.
  - public/js/ui_building.js : 인터페이스를 초기화 및 재배치하는 작업을 수행합니다.
