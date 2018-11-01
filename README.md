@@ -1,5 +1,5 @@
 # FOR Team
-We are focus on the root
+We are 'f'ocus 'o'n the 'r'oot
 
 # Member and Role
  - Boohyung Lee (이부형) : PM
