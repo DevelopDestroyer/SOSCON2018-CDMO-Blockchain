@@ -1,5 +1,5 @@
 # FOR Team
-Gazzzzzzzzzzzzzzzza~~~~~~~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!
+We are focus on the root
 
 # Member and Role
  - Boohyung Lee (이부형) : PM
