@@ -20,45 +20,45 @@ We are 'f'ocus 'o'n the 'r'oot
  - utils/marbles_cc_lib.js : 실질적인 트랜잭션 요청단 입니다. 이 모듈은 인스턴스화 되어있는 체인코드의 명세를 알고있으며, 서버사이드로부터 요청된 사항에 따라 적합한 함수를 블록체인 네트워크가 수행 할 수 있도록 합니다.
 ## Chaincode
 #### Product struct
-   ObjectType string         `json:"docType"` //field for couchdb
-   GroupId      string        `json:"groupid"` 
-   GroupName  string        `json:"groupname"`
-   RegisterUserId string     `json:"registeruserid"`
-   RegisterUserName string     `json:"registerusername"`
-   ProductId  string         `json:"productid"`      //the fieldtags are needed to keep case from bouncing around
-   RegisterDate string        `json:"registerdate"` // 등록일
-   ProductName string        `json:"productname"` // 제품명
-   ProductWeight int         `json:"productweight"` // 중량
-   ProductVolume int         `json:"productvolume"` //용량
-   MainIngredientName string `json:"mainingredientname"` //주성분명칭
-   FORCoin int              `json:"forcoin"` 
+   ObjectType string
+   GroupId      string
+   GroupName  string
+   RegisterUserId string
+   RegisterUserName string
+   ProductId  string
+   RegisterDate string
+   ProductName string
+   ProductWeight int
+   ProductVolume int
+   MainIngredientName string
+   FORCoin int
 #### Material struct 
-   ObjectType string         `json:"docType"` //field for couchdb
-   GroupId      string        `json:"groupid"` 
-   GroupName  string        `json:"groupname"`
-   RegisterUserId string     `json:"registeruserid"`
-   RegisterUserName string     `json:"registerusername"`
-   MaterialId  string        `json:"materialid"`      //the fieldtags are needed to keep case from bouncing around
-   MaterialName string      `json:"materialname"`
-   RegisterDate string        `json:"registerdate"` // 등록일
-   MaterialWeight int         `json:"materialweight"` // 중량
-   FORCoin        int        `json:"forcoin"`
+   ObjectType string
+   GroupId      string
+   GroupName  string
+   RegisterUserId string
+   RegisterUserName string
+   MaterialId  string
+   MaterialName string
+   RegisterDate string
+   MaterialWeight int
+   FORCoin        int
 #### Contract struct 
-   ObjectType string           `json:"docType"` //field for couchdb
-   ContractId      string        `json:"contractid"` 
-   SupplyGroupId  string       `json:"supplygroupid"`
-   SupplyGroupName  string        `json:"supplygroupname"`
-   DevelopGroupId   string      `json:"developgroupid"`
-   DevelopGroupName string     `json:"developgroupname"`
-   RegisterSupplyUserId string     `json:"registersupplyuserid"`
-   RegisterDevelopUserId string     `json:"registerdevelopuserid"`
-   RegisterSupplyUserName string `json:"registersupplyusername"`
-   RegisterDevelopUserName string `json:"registerdevelopusername"`
-   IsSupplyGroupConfirm string   `json:"issupplygroupconfirm"`
-   IsDevelopGroupConfirm string `json:"isdevelopgroupconfirm"`
-   MaterialID string          `json:"materialid"`
-   MaterialName string          `json:"materialname"`
-   MaterialWeight   int          `json:"materialweight"`
-   FORCoin int                `json:"forcoin"` 
+   ObjectType string
+   ContractId      string
+   SupplyGroupId  string
+   SupplyGroupName  string
+   DevelopGroupId   string
+   DevelopGroupName string
+   RegisterSupplyUserId string
+   RegisterDevelopUserId string
+   RegisterSupplyUserName string
+   RegisterDevelopUserName string
+   IsSupplyGroupConfirm string
+   IsDevelopGroupConfirm string
+   MaterialID string
+   MaterialName string
+   MaterialWeight   int
+   FORCoin int
 # Demo
  - https://www.youtube.com/watch?v=_OSyx8i57fA
